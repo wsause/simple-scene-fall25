@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A Simple Scene – [your name]</title>
+        <script src=
+            "https://aframe.io/releases/1.7.0/aframe.min.js">
+        </script>
+    </head>
+    <body>
+        <a-scene>
+            <a-plane
+                color="forestgreen"
+                position="0 0 0"
+                rotation="-90 0 0"
+                width="500"
+                height="500"
+            >
+            </a-plane>
+            <a-sky
+                color="lightskyblue"
+            >
+            </a-sky>
+
+            <a-mixin
+                id="wallcolor"
+                color="lightsteelblue"
+            >
+            </a-mixin>
+            <a-box
+                mixin="wallcolor"
+                position="0 1.5 -16"
+                rotation="0 0 0"
+                width="10"
+                height="3"
+                depth="0.1"
+            >
+            </a-box>
+            <a-box
+                mixin="wallcolor"
+                position="-5 1.5 -11"
+                rotation="0 90 0"
+                width="10"
+                height="3"
+                depth="0.1"
+            >
+            </a-box>
+            <a-box
+                mixin="wallcolor"
+                position="5 1.5 -11"
+                rotation="0 90 0"
+                width="10"
+                height="3"
+                depth="0.1"
+            >
+            </a-box>
+
+        </a-scene>
+    </body>
+</html>
