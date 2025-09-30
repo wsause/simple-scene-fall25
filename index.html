@@ -53,7 +53,107 @@
                 depth="0.1"
             >
             </a-box>
-
+            <a-box
+                mixin="wallcolor"
+                position="-2.875 1.5 -6"
+                rotation="0 0 0"
+                width="4.25"
+                height="3"
+                depth="0.1"
+            >
+            </a-box>
+            <a-box
+                mixin="wallcolor"
+                position="2.875 1.5 -6"
+                rotation="0 0 0"
+                width="4.25"
+                height="3"
+                depth="0.1"
+            >
+            </a-box>
+            <a-box
+                mixin="wallcolor"
+                position="0 2.75 -6"
+                rotation="0 0 0"
+                width="1.5"
+                height="0.5"
+                depth="0.1"
+            >
+            </a-box>
+            <a-box
+                color="tan"
+                position="0 0 -11"
+                width="10"
+                depth="10"
+                height="0.1"
+            >
+            </a-box>
+            <a-box
+                color="darkgray"
+                position="0 3 -11"
+                width="12"
+                depth="12"
+                height="0.25"
+            >
+            </a-box>
+            <a-mixin
+                id="treetrunk"
+                color="saddlebrown"
+                geometry="radius:0.2; height:3"
+            >
+            </a-mixin>
+            <a-cylinder
+                mixin="treetrunk"
+                position="-8 1 -7"
+            >
+            </a-cylinder>
+            <a-cylinder
+                mixin="treetrunk"
+                position="-3 1 -1"
+            >
+            </a-cylinder>
+            <a-cylinder
+                mixin="treetrunk"
+                position="8 1 -6"
+            >
+            </a-cylinder>
+            <a-cylinder
+                mixin="treetrunk"
+                position="4 1 -2"
+            >
+            </a-cylinder>
+            <a-mixin
+                id="conicaltreeleaves"
+                color="green"
+                geometry="radius-bottom:1; height:3"
+            >
+            </a-mixin>
+            <a-cone
+                mixin="conicaltreeleaves"
+                position="-8 2.25 -7"
+            >
+            </a-cone>
+            <a-cone
+                mixin="conicaltreeleaves"
+                position="4 2.25 -2"
+            >
+            </a-cone>
+            <a-mixin
+                id="sphericaltreeleaves"
+                color="green"
+                geometry="radius:1"
+            >
+            </a-mixin>
+            <a-sphere
+                mixin="sphericaltreeleaves"
+                position="-3 2 -1"
+            >
+            </a-sphere>
+            <a-sphere
+                mixin="sphericaltreeleaves"
+                position="8 2 -6"
+            >
+            </a-sphere>
         </a-scene>
     </body>
 </html>
