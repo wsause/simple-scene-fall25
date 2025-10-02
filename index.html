@@ -8,8 +8,65 @@
     </head>
     <body>
         <a-scene>
+            <a-assets>
+                <img
+                    id="grass-base"
+                    src="assets\Grass_005_BaseColor.jpg"
+                >
+                <img
+                    id="grass-ambient-occlusion"
+                    src="assets\Grass_005_AmbientOcclusion.jpg"
+                >
+                <img
+                    id="grass-normal"
+                    src="assets\Grass_005_Normal.jpg"
+                >
+                <img 
+                    id="sphericaltreeleaves-base"
+                    src="assets\Stylized_Leaves_001_basecolor.jpg"
+                >
+                <img
+                    id="sphericaltreeleaves-ambient-occlusion"
+                    src="assets\Stylized_Leaves_001_ambientOcclusion.jpg"
+                >
+                <img
+                    id="sphericaltreeleaves-normal"
+                    src="assets\Stylized_Leaves_001_normal.jpg"
+                >
+                <img
+                    id="conicaltreeleaves-base"
+                    src="assets\Stylized_Leaves_002_basecolor.jpg"
+                >
+                <img
+                    id="conicaltreeleaves-ambient-occlusion"
+                    src="assets\Stylized_Leaves_002_ambientOcclusion.jpg"
+                >
+                <img
+                    id="conicaltreeleaves-normal"
+                    src="assets\Stylized_Leaves_002_normal.jpg"
+                >
+                <img
+                    id="treetrunk-base"
+                    src="assets\Bark_06_basecolor.jpg"
+                >
+                <img
+                    id="treetrunk-ambient-occlusion"
+                    src="assets\Bark_06_ambientOcclusion.jpg"
+                >
+                <img
+                    id="treetrunk-normal"
+                    src="assets\Bark_06_normal.jpg"
+                >
+            </a-assets>
+
             <a-plane
-                color="forestgreen"
+                material=
+                    "src: #grass-base;
+                     repeat: 500 500;
+                     ambientOcclusionMap: #grass-ambient-occlusion;
+                     ambientOcclusionTextureRepeat: 500 500;
+                     normalMap: #grass-normal;
+                     normalTextureRepeat: 500 500"
                 position="0 0 0"
                 rotation="-90 0 0"
                 width="500"
@@ -98,7 +155,13 @@
             </a-box>
             <a-mixin
                 id="treetrunk"
-                color="saddlebrown"
+                material =
+                    "src: #treetrunk-base;
+                    repeat: 3 5;
+                    ambientOcclusionMap: #treetrunk-ambient-occlusion;
+                    ambientOcclusionTextureRepeat: 3 5;
+                    normalMap: #treetrunk-normal;
+                    normalTextureRepeat: 3 5"
                 geometry="radius:0.2; height:3"
             >
             </a-mixin>
@@ -124,7 +187,13 @@
             </a-cylinder>
             <a-mixin
                 id="conicaltreeleaves"
-                color="green"
+                material =
+                    "src: #conicaltreeleaves-base;
+                    repeat: 2 2;
+                    ambientOcclusionMap: #conicaltreeleaves-ambientocclusion;
+                    ambientOcclusionTextureRepeat: 2 2;
+                    normalMap: #conicaltreeleaves-normal;
+                    normalTextureRepeat: 2 2;"
                 geometry="radius-bottom:1; height:3"
             >
             </a-mixin>
@@ -140,7 +209,13 @@
             </a-cone>
             <a-mixin
                 id="sphericaltreeleaves"
-                color="green"
+                material =
+                    "src: #sphericaltreeleaves-base;
+                    repeat: 8 8;
+                    ambientOcclusionMap: #sphericaltreeleaves-ambientocclusion;
+                    ambientOcclusionTextureRepeat: 8 8;
+                    normalMap: #sphericaltreeleaves-normal;
+                    normalTextureRepeat: 8 8;"
                 geometry="radius:1"
             >
             </a-mixin>
